@@ -6,9 +6,9 @@ int main(){
     string word;
     int arr[26] = {0};
     cin >> word;
-    for(int i = 0; i< word.length(); i++){
-        arr[word[i] - 'a']++;
+    for(int c : word){
+        arr[c - 'a']++;
     }
-    for(int i = 0; i < 26; i++)
+    for(int i=0; i<26; i++)
         cout << arr[i] << ' ';
 }
