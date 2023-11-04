@@ -13,12 +13,12 @@ int main(){
         else arr1[g-1]++;
     }
     
-    for(int i= 0; i<n; i++){
+    for(int i= 0; i<6; i++){
         if(arr0[i] % k == 0) count += arr0[i] / k;
         else count += (arr0[i] / k) + 1;
     }
     
-    for(int i= 0; i<n; i++){
+    for(int i= 0; i<6; i++){
         if(arr1[i] % k == 0) count += arr1[i] / k;
         else count += (arr1[i] / k) + 1;
     }
