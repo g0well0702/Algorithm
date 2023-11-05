@@ -18,7 +18,7 @@ int main() {
     
  
     for (int i = 0; i < n; i++) {
-        if (arr1[i] < x && arr2[x - arr1[i]] > 0) { // arr1[i] < x 이 조건이 필수, 왜냐면 x 가 더 작을 때는 만족하는 쌍이 없기 때문에
+        if (arr1[i] < x && arr2[x - arr1[i]] > 0) { // arr1[i] < x 이 조건이 필수, 왜냐면 x 가 더 작을 때는 인덱스 값이 음수가 되기 때문
             count += arr2[x-arr1[i]];
         }
         arr2[arr1[i]]++;
