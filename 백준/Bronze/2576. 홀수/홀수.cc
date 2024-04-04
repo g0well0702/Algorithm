@@ -1,25 +1,21 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
-int main(){
-    int arr[7];
-    int buf, index = 0;
-    for(int i = 0; i < 7; i++){
-        cin >> buf;
-        if(buf % 2 == 1){
-            arr[index] = buf;
-            index++;
+int main(void){
+    ios::sync_with_stdio(0);
+    cin.tie(0);
+    
+    int x, odd = 0, sum = 0, min = 100;
+    
+    for(int i =0; i < 7; i++){
+        cin >> x;
+        if(x & 1){
+            odd += 1;
+            sum += x;
+            if(x < min) min = x;
         }
     }
-    int min = arr[0];
-    int sum = 0;
-    for(int i =0; i < index; i++){
-        if(min > arr[i]) min = arr[i];
-        sum += arr[i];
-    }
-    if(sum == 0) cout << -1;
-    else{
-        cout << sum << '\n';
-        cout << min;
-    }
+    
+    if(odd) cout << sum << '\n' << min;
+    else cout << -1;
 }
