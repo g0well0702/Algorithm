@@ -1,21 +1,18 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main(void){
     ios::sync_with_stdio(0);
     cin.tie(0);
     
-    int a, b, c;
-    cin >> a >> b >> c;
+    int arr[3];
+    cin >> arr[0] >> arr[1] >> arr[2];
     
-    if(a == b && b == c) cout << 10000 + a * 1000;
-    else if(a == b && b != c) cout << 1000 + a * 100;
-    else if(a == c && a != b) cout << 1000 + a * 100;
-    else if(b == c && a != c) cout << 1000 + b * 100;
-    else if(a != b && a!= c && b != c) {
-        int max = a;
-        if(b > a && b > c) max = b;
-        if(c > a && c > b) max = c;
-        cout << max * 100;
-    }
+    sort(arr, arr+3);
+    
+    if(arr[0] == arr[2]) cout << 10000 + arr[0]*1000;
+    else if (arr[0] == arr[1] || arr[1] == arr[2]) cout << 1000 + arr[1] * 100;
+    else cout << arr[2] * 100;
+    
+    
 }
