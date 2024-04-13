@@ -6,7 +6,7 @@ int arr[9];
 int main(void){
     ios::sync_with_stdio(0), cin.tie(0);
     
-    int n, max;
+    int n;
     cin >> n;
     
     while(n > 0){
@@ -18,7 +18,7 @@ int main(void){
     if(arr[6] & 1) arr[6] = arr[6] / 2 + 1;
     else arr[6] /= 2;
     
-    max = arr[0];
+    int max = arr[0];
     
     for(int i = 1; i < 9; i++){
         if(arr[i] > max) max = arr[i];
