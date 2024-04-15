@@ -5,7 +5,7 @@ int main(void){
     ios::sync_with_stdio(0), cin.tie(0);
     
     int n;
-    int count[1000] = {0};
+    int same[1000] = {0};
     string s1, s2;
     cin >> n;
     
@@ -26,12 +26,12 @@ int main(void){
                 if(arr1[j] == arr2[j]) flag++;
         }
         
-        if(flag == 26) count[i] = 1;
-        else count[i] = 0;
+        if(flag == 26) same[i] = 1;
+        else same[i] = 0;
     }
     
     for(int i = 0; i < n; i++){
-        if(count[i] == 1) cout << "Possible" << '\n';
+        if(same[i] == 1) cout << "Possible" << '\n';
         else cout << "Impossible" << '\n';
     }
     
