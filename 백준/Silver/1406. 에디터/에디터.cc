@@ -1,4 +1,4 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int unused = 1;
@@ -60,7 +60,6 @@ int main(void) {
         if (input == 'P') { // len++
             cin >> ch;
             insert(data, prev, next, cursor, ch);
-            ++len;
         }
         else if (input == 'L') {
             if (prev[cursor] != -1) cursor = prev[cursor]; // 더미헤드에 접근 못하게
@@ -70,7 +69,6 @@ int main(void) {
         }
         else if (input == 'B') { // len--
             erase(prev, next, cursor);
-            --len;
         }
     }
 
