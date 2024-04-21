@@ -17,7 +17,7 @@ int main(void) {
         for (int j = 0; j < s.size(); j++) {
             if (s[j] == '<') {
                 auto tempCursor = cursor;
-                if (*(--tempCursor) != '\n') {
+                if (cursor != L.begin() && *(--tempCursor) != '\n') {
                     --cursor;
                 }
             }
@@ -27,7 +27,7 @@ int main(void) {
             }
             else if (s[j] == '-') {
                 auto tempCursor = cursor;
-                if (*(--tempCursor) != '\n') {
+                if (cursor != L.begin() && *(--tempCursor) != '\n') {
                     --cursor;
                     cursor = L.erase(cursor);
                 }
